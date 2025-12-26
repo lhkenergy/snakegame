@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>贪吃蛇游戏</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🐍 贪吃蛇游戏</h1>
+        </div>
+        
+        <div class="control-panel">
+            <div class="control-group">
+                <label for="speed-slider">游戏速度:</label>
+                <input type="range" id="speed-slider" min="1" max="20" value="10" class="slider">
+                <span id="speed-value">10</span>
+            </div>
+            <div class="button-group">
+                <button id="start-btn" class="btn btn-primary">开始游戏</button>
+                <button id="pause-btn" class="btn btn-secondary">暂停</button>
+                <button id="reset-btn" class="btn btn-danger">重新开始</button>
+            </div>
+        </div>
+
+        <div class="game-info">
+            <div class="info-item">
+                <span class="label">分数:</span>
+                <span id="score" class="value">0</span>
+            </div>
+            <div class="info-item">
+                <span class="label">最高分:</span>
+                <span id="high-score" class="value">0</span>
+            </div>
+            <div class="info-item">
+                <span class="label">状态:</span>
+                <span id="status" class="value status-stopped">已停止</span>
+            </div>
+        </div>
+
+        <div class="game-board-container">
+            <canvas id="game-canvas" width="600" height="600" class="game-canvas"></canvas>
+        </div>
+
+        <div class="instructions">
+            <h3>游戏说明</h3>
+            <ul>
+                <li>📱 使用<strong>方向键</strong>或<strong>WASD</strong>控制蛇的移动</li>
+                <li>🍎 吃到食物会增长身体并增加分数</li>
+                <li>⚠️ 不要撞到墙壁或自己的身体</li>
+                <li>⚡ 使用滑块调节游戏速度</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
